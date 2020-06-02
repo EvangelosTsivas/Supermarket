@@ -1,4 +1,4 @@
-package com.supermarketTeam.controllers.config;
+package com.supermarketTeam.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -55,7 +55,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
-                .antMatchers(HttpMethod.POST, "/paypal/pay/**");
-
+                .antMatchers(HttpMethod.POST, "/paypal/pay/**")
+                .antMatchers(HttpMethod.GET, "/ws**")
+                .antMatchers(HttpMethod.POST, "/ws**");
     }
 }

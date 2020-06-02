@@ -27,17 +27,18 @@
 
         <nav id="main-nav">
             <ul>
-                <li><a href="http://localhost:8084/ProductBoot/welcome/">Home</a></li>
-                <li><a href="http://localhost:8084/ProductBoot/product/" >Products</a></li>
-                <li><a href="http://localhost:8084/ProductBoot/address/">Address</a></li>
-                <li><a href="http://localhost:8084/ProductBoot/category/">Category</a></li>
-                <li><a href="http://localhost:8084/ProductBoot/mtype/">Measure Type</a></li>
+                <li><a href="${contextPath}/welcome/">Home</a></li>
+                <li><a href="${contextPath}/product/" >Products</a></li>
+                <li><a href="${contextPath}/address/">Address</a></li>
+                <li><a href="${contextPath}/category/">Category</a></li>
+                <li><a href="${contextPath}/mtype/">Measure Type</a></li>
+                 <li><a href="${contextPath}/chat/">Chat</a></li>
                 <li><c:if test="${pageContext.request.userPrincipal.name != null}">
                         <form id="logoutForm" method="POST" action="${contextPath}/logout">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         </form>
 
-                        <h2>Hello ${pageContext.request.userPrincipal.name} ! <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+                        <h2>${pageContext.request.userPrincipal.name}, <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
                     </c:if></li>
             </ul>
         </nav>
