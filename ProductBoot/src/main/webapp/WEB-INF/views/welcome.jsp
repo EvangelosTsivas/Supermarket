@@ -48,7 +48,9 @@
               font-style: italic;
                 font-size: 20px;  
             }
-            
+            body{
+                background-color: #fff;
+            }
         </style>
     </head>
     <body>
@@ -90,7 +92,6 @@
         <br>
         <br>
         <br>
-
         <div class="jumbotron">
             <p class="quote">
                 A person buying ordinary products in a supermarket is in touch with his deepest emotions.<br>
@@ -98,6 +99,6 @@
             <p class="who"><strong>John Kenneth Galbraith</strong></p>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
+        <jsp:include page="footer.jsp" />
     </body>
 </html>

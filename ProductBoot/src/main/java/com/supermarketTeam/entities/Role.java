@@ -1,22 +1,22 @@
 package com.supermarketTeam.entities;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "role")
 public class Role {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
-    
-   public Role(){
-       
-   }
 
-   public Role(String name) {
+    public Role() {
+
+    }
+
+    public Role(String name) {
         this.name = name;
     }
 
@@ -36,6 +36,4 @@ public class Role {
         this.name = name;
     }
 
-    
-   
 }

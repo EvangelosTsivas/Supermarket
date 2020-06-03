@@ -1,8 +1,6 @@
-
 package com.supermarketTeam.controllers;
 
 import com.supermarketTeam.models.ChatMessage;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;

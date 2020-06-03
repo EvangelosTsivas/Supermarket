@@ -1,6 +1,3 @@
-
-/* global Stomp */
-
 'use strict';
 
 var usernamePage = document.querySelector('#username-page');

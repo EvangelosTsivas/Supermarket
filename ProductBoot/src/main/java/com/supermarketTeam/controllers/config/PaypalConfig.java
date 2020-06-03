@@ -1,4 +1,4 @@
-package com.supermarketTeam.config;
+package com.supermarketTeam.controllers.config;
 
 import java.util.HashMap;
 import java.util.Map;

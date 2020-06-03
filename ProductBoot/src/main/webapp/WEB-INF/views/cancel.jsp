@@ -12,7 +12,7 @@
         <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
         <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
         <title></title>
-
+        
     </head>
     <body>
         <div class="page-wrap d-flex flex-row align-items-center">

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-       <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+    <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-   <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,18 +12,32 @@
         <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
         <title>Update Address</title>
         <jsp:include page="headerWithShopCart.jsp" />
+        <style>
+            h2{
+                font-size: 16px;
+                margin : auto;
+                font-weight:700;
+            }
+            .generic-container
+            {
+                width: 60%;
+                margin-left: 280px;
+                font-size: 14px !important; 
+            }
+        </style>
     </head>
     <body>
         <br>
         <br>
         <div class="generic-container">
             <h2>Update Address</h2>
+            <br>
             <form:form   method="POST" action="${id}" modelAttribute="address" class="form-horizontal">
                 <div class="row">
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="addressName">Address</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="addressName" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="addressName" class="form-control input-sm" maxlength="40" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -31,7 +45,7 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="city">City</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="city" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="city" class="form-control input-sm" maxlength="30" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -39,7 +53,7 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="country">Country</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="country" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="country" class="form-control input-sm" maxlength="30" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -47,23 +61,23 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="postcode">Post Code</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="postcode" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="postcode" class="form-control input-sm" maxlength="12" required="required"/>
                         </div>
                     </div>
                 </div>
-                  <div class="row">
+                <div class="row">
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="telephone">Telephone</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="telephone" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="telephone" class="form-control input-sm" maxlength="12" required="required"/>
                         </div>
                     </div>
                 </div>    
-                 <div class="row">
+                <div class="row">
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="text">Instructions</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="text" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="text" class="form-control input-sm" maxlength="255" required="required"/>
                         </div>
                     </div>
                 </div>        
@@ -71,11 +85,11 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="userId.id">User ID</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="userId.id" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="userId.id" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>
-             
+
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form:form>
         </div>

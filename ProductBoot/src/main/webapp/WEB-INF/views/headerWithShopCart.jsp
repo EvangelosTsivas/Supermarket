@@ -32,7 +32,8 @@
                 <li><a href="${contextPath}/address/">Address</a></li>
                 <li><a href="${contextPath}/category/">Category</a></li>
                 <li><a href="${contextPath}/mtype/">Measure Type</a></li>
-                 <li><a href="${contextPath}/chat/">Chat</a></li>
+                <li><a href="${contextPath}/user/">Users</a></li>
+                <li><a href="${contextPath}/chat/">Chat</a></li>
                 <li><c:if test="${pageContext.request.userPrincipal.name != null}">
                         <form id="logoutForm" method="POST" action="${contextPath}/logout">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

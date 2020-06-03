@@ -2,7 +2,6 @@ package com.supermarketTeam.dto;
 
 import javax.validation.constraints.NotEmpty;
 
-
 public class MeasurementTypeRegistrationDto {
     
     @NotEmpty

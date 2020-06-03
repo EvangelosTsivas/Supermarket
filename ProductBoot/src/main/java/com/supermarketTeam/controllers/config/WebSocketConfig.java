@@ -1,4 +1,4 @@
-package com.supermarketTeam.config;
+package com.supermarketTeam.controllers.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

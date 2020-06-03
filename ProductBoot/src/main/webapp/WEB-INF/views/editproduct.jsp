@@ -12,18 +12,32 @@
         <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
         <title>Update Product</title>
         <jsp:include page="headerWithShopCart.jsp" />
+        <style>
+            h2{
+                font-size: 16px;
+                margin : auto;
+                font-weight:700;
+            }
+             .generic-container
+            {
+                width: 60%;
+                margin-left: 280px;
+                font-size: 14px !important; 
+            }
+        </style>
     </head>
     <body>
         <br>
         <br>        
         <div class="generic-container">
-            <h2>Register a new Product</h2>
+            <h2>Update Product</h2>
+            <br>
             <form:form   method="POST" action="${id}" modelAttribute="product" class="form-horizontal">
                 <div class="row">
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="name">Name</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="name" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="name" class="form-control input-sm" maxlength="30" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -31,7 +45,7 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="brand">Brand</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="brand" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="brand" class="form-control input-sm" maxlength="30" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -39,7 +53,7 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="quantity">Quantity</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="quantity" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="quantity" class="form-control input-sm" maxlength="15" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -47,7 +61,7 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="price">Price</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="price" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="price" class="form-control input-sm" maxlength="10" required="required"/>
                         </div>
                     </div>
                 </div>
@@ -55,7 +69,8 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="bio">Bio</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="bio" class="form-control input-sm" maxlength="45"/>
+                            <form:radiobutton path="bio" value="True"/>True  <spring:message code="label.roundYes"/>
+                            <form:radiobutton path="bio" value="False"/> False  <spring:message code="label.roundNo"/>
                         </div>
                     </div>
                 </div>    
@@ -87,7 +102,7 @@
                     <div class="form-group col-md-12">
                         <label class="col-md-3 control-lable" for="image">Image</label>
                         <div class="col-md-7">
-                            <form:input type="file" path="image" accept="image/x-png,image/gif,image/jpeg" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="file" path="image" accept="image/x-png,image/gif,image/jpeg" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>

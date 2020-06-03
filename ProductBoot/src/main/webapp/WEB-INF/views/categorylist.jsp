@@ -10,12 +10,20 @@
         <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
         <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
         <title>Category List</title>
+        
+         <style>
+            .panel-default
+            {
+                width: 40%;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+        </style>
         <jsp:include page="headerWithShopCart.jsp" />
     </head>
     <body>
         <br>
         <br>
-
             <div class="panel panel-default">
                 <div class="panel-heading"><span class="lead">Category's List</span></div>
                 <table class="table table-hover">
@@ -44,5 +52,5 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+       </body>
 </html>

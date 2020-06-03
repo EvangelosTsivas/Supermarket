@@ -1,5 +1,3 @@
-<%@page import="org.springframework.security.core.userdetails.UserDetails"%>
-<%@page import="org.springframework.security.core.context.SecurityContextHolder"%>
 <!DOCTYPE html>
 <html>
     <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
@@ -12,7 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
         <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
-        <title>Add Address</title>
+        <title>Add Product</title>
         <jsp:include page="headerWithShopCart.jsp" />
         <style>
             h2{
@@ -30,68 +28,50 @@
     </head>
     <body>
         <br>
-        <br>
         <div class="generic-container">
-            <h2>Register a new Address</h2>
+            <h2>Register a new User</h2>
             <br>
-            <form:form   method="POST" action="new" modelAttribute="address" class="form-horizontal">
+            <form:form   method="POST" action="new" modelAttribute="user" class="form-horizontal">
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="addressName">Address</label>
+                        <label class="col-md-3 control-lable" for="username">Username</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="addressName" class="form-control input-sm" maxlength="40" required="required"/>
+                            <form:input type="text" path="username" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="city">City</label>
+                        <label class="col-md-3 control-lable" for="password">Password</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="city" class="form-control input-sm" maxlength="30" required="required"/>
+                            <form:input type="text" path="password" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="country">Country</label>
+                        <label class="col-md-3 control-lable" for="firstName">First Name</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="country" class="form-control input-sm" maxlength="30" required="required"/>
+                            <form:input type="text" path="firstName" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="postcode">Post Code</label>
+                        <label class="col-md-3 control-lable" for="lastName">Last Name</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="postcode" class="form-control input-sm" maxlength="12" required="required"/>
+                            <form:input type="text" path="lastName" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="telephone">Telephone</label>
+                        <label class="col-md-3 control-lable" for="email">Email</label>
                         <div class="col-md-7">
-                            <form:input type="text" path="telephone" class="form-control input-sm" maxlength="12" required="required"/>
-                        </div>
-                    </div>
-                </div>    
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="text">Instructions</label>
-                        <div class="col-md-7">
-                            <form:input type="text" path="text" class="form-control input-sm" maxlength="255" required="required"/>
-                        </div>
-                    </div>
-                </div>        
-                <div class="row" hidden="">
-                    <div class="form-group col-md-12">
-                        <label class="col-md-3 control-lable" for="userId.id">User ID</label>
-                        <div class="col-md-7">
-                            <form:input type="text" path="userId.id" value="${userId}" class="form-control input-sm" maxlength="45"/>
+                            <form:input type="text" path="email" class="form-control input-sm" maxlength="45" required="required"/>
                         </div>
                     </div>
                 </div>
-
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form:form>
         </div>

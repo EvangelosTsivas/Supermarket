@@ -11,6 +11,14 @@
         <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
         <title>Measurement Type List</title>
         <jsp:include page="headerWithShopCart.jsp" />
+         <style>
+            .panel-default
+            {
+                width: 40%;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+        </style>
     </head>
     <body>
         <br>
